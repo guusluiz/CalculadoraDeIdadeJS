@@ -12,16 +12,7 @@ function cadastrarUsuário() {
     anoAtual = new Date().getFullYear();
     let idade = anoAtual - anoRecebido;
     let classificacao;
-    let dadosUsuario = {
-        nome: nomeRecebido,
-        dia: diaRecebido,
-        mes: mesRecebido,
-        ano: anoRecebido,
-        idade: idade,
-        classificacao: classificacao
-        //precisa de data hora?
-    }
-
+    
     if (idade <= 12) {
         classificacao = "Criança";
 
@@ -33,6 +24,16 @@ function cadastrarUsuário() {
 
     } else if (idade >= 65) {
         classificacao = "Idoso";
+    }
+
+    let dadosUsuario = {
+        nome: nomeRecebido,
+        dia: diaRecebido,
+        mes: mesRecebido,
+        ano: anoRecebido,
+        idade: idade,
+        classificacao: classificacao
+        //precisa de data hora?
     }
 
     let listaUsuarios = [];
